@@ -19,6 +19,9 @@ def merge_sort(a,b):
         if a[i] <= b[j]:
             sorted_list.append(a[i])
             i+=1
+        else:
+            sorted_list.append(b[j])
+            j+=1
 
     return sorted_list
 
