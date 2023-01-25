@@ -5,3 +5,5 @@ print("******* Sir Danilo Madrigalejos ******")
 
 print("Bubble Sort")
 print("")
+
+nums = []

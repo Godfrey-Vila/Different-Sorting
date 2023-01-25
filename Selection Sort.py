@@ -6,6 +6,8 @@ print("******* Sir Danilo Madrigalejos ******")
 print("Selection Sort")
 print("")
 
+print("[26, 22, 91, 67, 15, 49, 59, 32, 2, 17]")
+print("")
 def sort(nums):
     for i in range(9):
         minpos = i
