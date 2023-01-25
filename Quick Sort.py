@@ -10,7 +10,8 @@ print("[26, 22, 91, 67, 15, 49, 59, 32, 2, 17]")
 print("")
 
 def partition(elements):
-    pass
+    pivot_index = 0
+    pivot = elements[pivot_index]
 
 def quick_sort(elements):
     partition(elements)
