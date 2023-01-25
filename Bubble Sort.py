@@ -6,4 +6,8 @@ print("******* Sir Danilo Madrigalejos ******")
 print("Bubble Sort")
 print("")
 
-nums = []
+def sort(nums):
+
+nums = [26, 22, 91, 67, 15, 49, 59, 32, 2, 17]
+sort (nums)
+print(nums)
