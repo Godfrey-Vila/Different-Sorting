@@ -23,6 +23,14 @@ def merge_sort(a,b):
             sorted_list.append(b[j])
             j+=1
 
+    while i < len_a:
+        sorted_list.append(a[i])
+        i+=1
+
+    while i < len_b:
+        sorted_list.append(b[j])
+        j+=1
+
     return sorted_list
 
 if __name__ == '__main__':
