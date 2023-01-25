@@ -16,11 +16,8 @@ def swap(a, b, arr):
         arr[b] = tmp
 
 def partition(elements):
-    pivot_index = 0
+    pivot_index = start
     pivot = elements[pivot_index]
-
-    start = pivot_index + 1
-    end = len(elements) - 1
 
     while start < end:
         while elements[start] <= pivot:
@@ -34,10 +31,15 @@ def partition(elements):
 
     swap(pivot_index, end, elements)
 
-def quick_sort(elements):
-    partition(elements)
+    return end
+
+def quick_sort(elements, start, end):
+    if start < end:
+        pi = partition(elements, start, end)
+        quick_sort(elements, start, pi -1)
+        quick_sort(elements, pi+1, end)
 
 if __name__ == '__main__':
     elements = [26, 22, 91, 67, 15, 49, 59, 32, 2, 17]
-    quick_sort(elements)
+    quick_sort(elements, 0, len(elements)-1)
     print(elements)
