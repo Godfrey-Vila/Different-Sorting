@@ -4,9 +4,10 @@ print("******** SECTION BSCOE 2-2 ***********")
 print("******* Sir Danilo Madrigalejos ******")
 
 print("Selection Sort")
+print("")
 
 def sort(nums):
-    for i in range(26):
+    for i in range(9):
         minpos = i
         for j in range (i,10):
             if nums[j] < nums[minpos]:
@@ -16,6 +17,7 @@ def sort(nums):
         nums[i] = nums[minpos]
         nums[minpos] = temp
 
+        print(nums)
 
 
 
