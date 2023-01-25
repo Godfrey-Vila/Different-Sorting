@@ -5,3 +5,5 @@ print("******* Sir Danilo Madrigalejos ******")
 
 print("Insertion Sort")
 print("")
+
+def insertion_sort(elements):
