@@ -15,6 +15,13 @@ def merge_sort(a,b):
     len_b = len(b)
     i = j = 0
 
+    while i < len_a and j < len_b:
+        if a[i] <= b[j]:
+            sorted_list.append(a[i])
+            i+=1
+
+    return sorted_list
+
 if __name__ == '__main__':
     a = [26, 22, 91, 67, 15]
     b = [49, 59, 32, 2, 17]
