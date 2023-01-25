@@ -28,7 +28,8 @@ def partition(elements):
     while elements[end] > pivot:
         end -= 1
 
-
+    if start < end:
+        swap(start, end, elements)
 
 def quick_sort(elements):
     partition(elements)
