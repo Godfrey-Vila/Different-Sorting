@@ -11,39 +11,43 @@ print("")
 
 def merge_sort(arr):
     if len(arr) <= 1:
-        return arr
-    mid = arr[:mid]
+        return
+
+    mid = len(arr)//2
+    left = arr[:mid]
     right = arr[mid:]
 
-    left = merge_sort(left)
+    merge_sort(left)
+    merge_sort(right)
+
+    merge_two_sorted_list(left, right, arr)
 
 
-def merge_two_sorted_list(a,b):
-    sorted_list = []
+def merge_two_sorted_list(a,b,arr):
     len_a = len(a)
     len_b = len(b)
-    i = j = 0
+    i = j = k = 0
 
     while i < len_a and j < len_b:
         if a[i] <= b[j]:
-            sorted_list.append(a[i])
+            arr[k] = a[i]
             i+=1
         else:
-            sorted_list.append(b[j])
+            arr[k] = (b[j])
             j+=1
-
+        k+=1
     while i < len_a:
-        sorted_list.append(a[i])
+        arr[k] = a[i]
         i+=1
+        k+=1
 
-    while i < len_b:
-        sorted_list.append(b[j])
+    while j < len_b:
+        arr[k] = (b[j])
         j+=1
-
-    return sorted_list
-
+        k+=1
+    print(arr)
 if __name__ == '__main__':
-    a = [26, 22, 91, 67, 15]
-    b = [49, 59, 32, 2, 17]
-
-    print(merge_two_sorted_list(a, b))
+    arr = [26, 22, 91, 67, 15, 49, 59, 32, 2, 17]
+    merge_sort(arr)
+    print("")
+    print(arr)
