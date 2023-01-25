@@ -12,6 +12,11 @@ def sort(nums):
             if nums[j] < nums[minpos]:
                 minpos = j
 
+        temp = nums[i]
+        nums[i] = nums[minpos]
+        nums[minpos] = temp
+
+
 
 
 nums = [26, 22, 91, 67, 15, 49, 59, 32, 2, 17]
