@@ -9,7 +9,11 @@ print("")
 print("[26, 22, 91, 67, 15, 49, 59, 32, 2, 17]")
 print("")
 
-def merge_sort(a,b):
+def merge_sort(arr):
+    if len(arr) <= 1:
+        return arr
+    pass
+def merge_two_sorted_list(a,b):
     sorted_list = []
     len_a = len(a)
     len_b = len(b)
@@ -37,4 +41,4 @@ if __name__ == '__main__':
     a = [26, 22, 91, 67, 15]
     b = [49, 59, 32, 2, 17]
 
-    print(merge_sort(a, b))
+    print(merge_two_sorted_list(a, b))
