@@ -12,7 +12,12 @@ print("")
 def merge_sort(arr):
     if len(arr) <= 1:
         return arr
-    pass
+    mid = arr[:mid]
+    right = arr[mid:]
+
+    left = merge_sort(left)
+
+
 def merge_two_sorted_list(a,b):
     sorted_list = []
     len_a = len(a)
