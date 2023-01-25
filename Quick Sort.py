@@ -9,6 +9,12 @@ print("")
 print("[26, 22, 91, 67, 15, 49, 59, 32, 2, 17]")
 print("")
 
+def swap(a, b, arr):
+    if a!=b:
+        tmp = arr[a]
+        arr[a] = arr[b]
+        arr[b] = tmp
+
 def partition(elements):
     pivot_index = 0
     pivot = elements[pivot_index]
@@ -21,6 +27,7 @@ def partition(elements):
 
     while elements[end] > pivot:
         end -= 1
+
 
 
 def quick_sort(elements):
