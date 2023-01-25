@@ -13,6 +13,11 @@ def partition(elements):
     pivot_index = 0
     pivot = elements[pivot_index]
 
+    start = pivot_index + 1
+    end = len(elements) - 1
+
+
+
 def quick_sort(elements):
     partition(elements)
 
