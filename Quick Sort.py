@@ -16,6 +16,11 @@ def partition(elements):
     start = pivot_index + 1
     end = len(elements) - 1
 
+    while elements[start] <= pivot:
+        start += 1
+
+    while elements[end] > pivot:
+        end -= 1
 
 
 def quick_sort(elements):
