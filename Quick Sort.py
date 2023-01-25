@@ -22,14 +22,17 @@ def partition(elements):
     start = pivot_index + 1
     end = len(elements) - 1
 
-    while elements[start] <= pivot:
-        start += 1
+    while start < end:
+        while elements[start] <= pivot:
+            start += 1
 
-    while elements[end] > pivot:
-        end -= 1
+        while elements[end] > pivot:
+            end -= 1
 
-    if start < end:
-        swap(start, end, elements)
+        if start < end:
+            swap(start, end, elements)
+
+    swap(pivot_index, end, elements)
 
 def quick_sort(elements):
     partition(elements)
