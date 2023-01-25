@@ -8,3 +8,6 @@ print("")
 
 print("[26, 22, 91, 67, 15, 49, 59, 32, 2, 17]")
 print("")
+
+def merge_sort(a,b):
+    pass
